@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log Call Reason"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColorPrimary"
+            android:layout_marginBottom="32dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact: "
+                android:textSize="14sp"
+                android:textColor="@color/textColorSecondary" />
+                
+            <TextView
+                android:id="@+id/tvContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/textColorPrimary"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="32dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Call Type: "
+                android:textSize="14sp"
+                android:textColor="@color/textColorSecondary" />
+            
+            <TextView
+                android:id="@+id/tvPhoneType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/textColorPrimary"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Why did you call?"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColorPrimary"
+            android:layout_marginBottom="12dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeColor="@color/dividerColor"
+            app:boxBackgroundColor="@color/surfaceColor"
+            app:hintEnabled="false"
+            android:layout_marginBottom="32dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minLines="5"
+                android:gravity="top|start"
+                android:inputType="textMultiLine"
+                android:hint="Write your notes here..."
+                android:textColorHint="@color/textColorSecondary"
+                android:textColor="@color/textColorPrimary" 
+                android:padding="16dp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:cornerRadius="12dp"
+            app:backgroundTint="@color/colorPrimary"
+            android:text="Save Log"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRemind"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:cornerRadius="12dp"
+            app:strokeColor="@color/dividerColor"
+            android:textColor="@color/textColorPrimary"
+            android:text="Remind me in 1 Hour"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</ScrollView>

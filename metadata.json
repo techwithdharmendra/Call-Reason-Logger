@@ -1,0 +1,8 @@
+{
+  "name": "Call Reason Logger",
+  "description": "Android app in Java to detect calls, log the reason, and store it offline.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

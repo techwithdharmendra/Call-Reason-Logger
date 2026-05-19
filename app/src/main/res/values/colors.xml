@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#111827</color> <!-- Gray 900 -->
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#4F46E5</color> <!-- Indigo 600 -->
+    <color name="textColorPrimary">#111827</color>
+    <color name="textColorSecondary">#6B7280</color>
+    <color name="backgroundColor">#F9FAFB</color> <!-- Gray 50 -->
+    <color name="surfaceColor">#FFFFFF</color>
+    <color name="dividerColor">#E5E7EB</color>
+</resources>
