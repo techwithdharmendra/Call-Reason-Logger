@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.net.Uri;
 import android.widget.Toast;
+import android.widget.TextView;
 import androidx.core.content.FileProvider;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import java.io.File;
@@ -108,6 +109,25 @@ public class MainActivity extends AppCompatActivity {
         logsList.clear();
         logsList.addAll(dbHelper.getAllLogs(query));
         adapter.notifyDataSetChanged();
+        updateDashboardStats();
+    }
+
+    private void updateDashboardStats() {
+        int incoming = 0, outgoing = 0, missed = 0;
+        for (CallLogModel log : logsList) {
+            String type = log.callType != null ? log.callType.toLowerCase() : "";
+            if (type.contains("incoming")) incoming++;
+            else if (type.contains("outgoing")) outgoing++;
+            else if (type.contains("missed")) missed++;
+        }
+
+        TextView tvIncoming = findViewById(R.id.tvStatIncoming);
+        TextView tvOutgoing = findViewById(R.id.tvStatOutgoing);
+        TextView tvMissed = findViewById(R.id.tvStatMissed);
+
+        if (tvIncoming != null) tvIncoming.setText(String.valueOf(incoming));
+        if (tvOutgoing != null) tvOutgoing.setText(String.valueOf(outgoing));
+        if (tvMissed != null) tvMissed.setText(String.valueOf(missed));
     }
 
     private void checkPermissions() {
